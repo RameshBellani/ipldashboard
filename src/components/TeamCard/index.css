@@ -1,46 +1,68 @@
 /* Write your CSS here */
-/* * {
-  border: 1px solid orange;
-} */
-.team-card-item-container {
-  border: 1px solid #ffffff33;
+.team-item {
+  list-style-type: none;
+  width: 50%;
+}
+
+.link {
   display: flex;
   align-items: center;
-  height: 120px;
-}
-.team-logo {
-  height: 50px;
-  width: 50px;
-  margin-left: 15px;
-  margin-right: 15px;
-  flex-shrink: 0;
-  margin: auto;
-}
-.team-logo-heading {
-  font-family: 'Bree serif';
-  text-shadow: 0px 2px 3px #000;
-  font-size: 14px;
-  text-align: center;
-  color: #ffffff;
-  max-width: 160px;
-  margin: auto;
-}
-.item-link {
-  color: black;
+  background-color: #ffffff33;
+  height: 85%;
+  border-radius: 12px;
+  border: 1px solid #ffffff;
+  padding-left: 7px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  padding-right: 7px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-bottom: 24px;
   text-decoration: none;
-  border: 1px solid lightgray;
-  border-radius: 5px;
-  width: 48%;
-  margin-bottom: 20px;
-  max-width: 350px;
-  transition: 0.5s;
 }
-@media screen and (max-width: 400px) {
-  .item-link {
-    width: 100%;
+
+@media screen and (min-width: 768px) {
+  .link {
+    padding-left: 24px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-right: 24px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 30px;
   }
 }
-.item-link:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 20px 5px #232325;
+
+.team-logo {
+  width: 45px;
+  height: 45px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-logo {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .team-logo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+.team-name {
+  text-align: center;
+  color: #ffffff;
+  font-family: 'Bree Serif';
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-name {
+    font-size: 32px;
+    margin-left: 16px;
+  }
 }

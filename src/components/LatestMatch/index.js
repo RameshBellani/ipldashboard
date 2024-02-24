@@ -1,47 +1,50 @@
-// Write your code here
 import './index.css'
 
 const LatestMatch = props => {
-  const {latestItem} = props
+  const {latestMatchData} = props
   const {
     competingTeam,
-    competingTeamLogo,
     date,
-    firstInnings,
-    manOfTheMatch,
-    result,
-    secondInnings,
-    umpires,
     venue,
-  } = latestItem
+    result,
+    competingTeamLogo,
+    firstInnings,
+    secondInnings,
+    manOfTheMatch,
+    umpires,
+  } = latestMatchData
 
   return (
-    <div className="latest-match-background">
-      <div className="container-one">
-        <div className="content-container">
-          <p className="name-date-style">{competingTeam}</p>
-          <p className="name-date-style">{date}</p>
-          <p className="paragraph">{venue}</p>
-          <p className="paragraph margin">{result}</p>
+    <div className="latest-match-container">
+      <h1 className="latest-match-heading">Latest Matches</h1>
+      <div className="latest-match-card">
+        <div className="latest-match-details-logo-container">
+          <div className="latest-match-details-1">
+            <p className="latest-match-team-name">{competingTeam}</p>
+            <p className="latest-match-date">{date}</p>
+            <p className="match-details">{venue}</p>
+            <p className="match-details">{result}</p>
+          </div>
+          <img
+            src={competingTeamLogo}
+            className="latest-match-team-logo"
+            alt={`latest match ${competingTeam}`}
+          />
         </div>
-        <img
-          src={competingTeamLogo}
-          alt={`latest match ${competingTeam}`}
-          className="latest-match-logo"
-        />
-      </div>
-      <hr />
-      <div className="container-two">
-        <p className="name-heading margin">First Innings</p>
-        <p className="paragraph margin">{firstInnings}</p>
-        <p className="name-heading margin">Second Innings</p>
-        <p className="paragraph margin">{secondInnings}</p>
-        <p className="name-heading margin">Man Of The Match</p>
-        <p className="paragraph margin">{manOfTheMatch}</p>
-        <p className="name-heading margin">Umpires</p>
-        <p className="paragraph margin">{umpires}</p>
+        <hr className="separator" />
+        <div className="latest-match-details-2">
+          <p className="latest-match-details-label">First Innings</p>
+          <p className="latest-match-details-value">{firstInnings}</p>
+          <p className="latest-match-details-label">Second Innings</p>
+          <p className="latest-match-details-value">{secondInnings}</p>
+          <p className="latest-match-details-label">Man Of The Match</p>
+          <p className="latest-match-details-value">{manOfTheMatch}</p>
+          <p className="latest-match-details-label">Umpires</p>
+          <p className="latest-match-details-value">{umpires}</p>
+        </div>
       </div>
     </div>
   )
 }
+
 export default LatestMatch
